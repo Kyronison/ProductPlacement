@@ -1,5 +1,7 @@
 # Конфигурационный файл
 spring:
+  host:
+    port: 8080
 
   # Подключение к H2 бд через jdbc
   datasource:
