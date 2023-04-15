@@ -21,11 +21,12 @@ public class ProductController {
     }
     @PostMapping("/product")
     public ProductDto insertProduct(
+        @RequestParam int user_id,
         @RequestParam String nameProduct,
         @RequestParam String locationProduct,
         @RequestParam String costProduct
         ){
-        Product product = productService.insert(nameProduct,locationProduct,costProduct);
+        Product product = productService.insert(user_id,nameProduct,locationProduct,costProduct);
         return ProductDto.toDto(product);
     }
     @PutMapping("/product")

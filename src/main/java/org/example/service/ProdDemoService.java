@@ -58,10 +58,10 @@ public class ProdDemoService {
             System.out.println(product.getUser());
         }
         productService.insert(
+                0,
                 "Кошка",
                 "Moscow",
                 "50000"
-
                 );
     }
 }

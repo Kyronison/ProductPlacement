@@ -41,6 +41,7 @@ public class UserController {
     public void deleteUser(@PathVariable int id){
         userService.deleteById(id);
     }
+
     @GetMapping("/user/{id}")
     public UserDto getUserById(@PathVariable int id){
         User user = userService.getById(id);

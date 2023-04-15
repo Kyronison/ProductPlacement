@@ -16,8 +16,9 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
-    public Product insert(String nameProduct, String locationProduct, String costProduct) {
+    public Product insert(int user_id, String nameProduct, String locationProduct, String costProduct) {
         Product product = Product.builder()
+                .user(userRepository.getById(user_id))
                 .name(nameProduct)
                 .product_location(locationProduct)
                 .cost(costProduct).

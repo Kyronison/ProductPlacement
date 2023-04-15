@@ -24,13 +24,13 @@ public class ProductApp {
         ConfigurableApplicationContext context = SpringApplication.run(ProductApp.class, args);
         /*
         context.getBean(ProdDemoService.class).prodDemo();
-        context.close();
+        context.close();*/
         try {
             //Консоль для визуализации бд в браузере
             Console.main(args);
         } catch (SQLException e) {
             e.printStackTrace();
-        }*/
+        }
 
     }
 }
