@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="2023-15-04--0002-product" author="aleksandr">
+
+        <!-- Проверяем нет ли уже таблицы с таким названием -->
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="product"/>
+            </not>
+        </preConditions>
+
+        <!-- Создаем таблицу -->
+        <createTable tableName="product">
+
+            <!-- Описываем колонки -->
+            <column name="id"
+                    type="NUMERIC(19,0)"
+                    autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="user_id" type="NUMERIC(19,0)">
+                <constraints nullable="true" foreignKeyName="fk_product_user" references="user(id)"/>
+            </column>
+
+            <column name="product_location"
+                    type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="likes"
+                    type="NUMERIC(19,0)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="views"
+                    type="NUMERIC(19,0)">
+                <constraints nullable="true"/>
+            </column>
+            <!--VARCHAR - стоимость может быть за "Спасибо"-->
+            <column name="cost" type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+
+        </createTable>
+
+    </changeSet>
+
+
+</databaseChangeLog>
