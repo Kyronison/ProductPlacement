@@ -1,5 +1,6 @@
 package org.example.domain;
 
+import liquibase.pro.packaged.C;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,6 +37,9 @@ public class User {
 
     @Column(name="salary")
     private int salary;
+
+    @Column(name="user_photo_url")
+    private String user_photo_url;
 
     @Column(name="user_status")
     private String user_status;
