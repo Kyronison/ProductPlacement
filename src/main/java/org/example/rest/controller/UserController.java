@@ -25,10 +25,16 @@ public class UserController {
 
     @PostMapping("/user")
     public UserDto insertUser( UserDto userDto){
-
         User user = userService.insert(UserDto.toDomainObject(userDto));
         return UserDto.toDto(user);
     }
+
+//    @PostMapping("/user_email")
+//    public UserDto insertUserEmail(@RequestParam){
+//        User user = userService.insert(UserDto.toDomainObject(userDto));
+//        return UserDto.toDto(user);
+//    }
+
 
     @PutMapping("/user/{id}")
     public UserDto updateUser(@PathVariable int id,
