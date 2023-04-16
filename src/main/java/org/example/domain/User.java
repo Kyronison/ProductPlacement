@@ -37,9 +37,6 @@ public class User {
     @Column(name="salary")
     private int salary;
 
-    @Column(name="photo_url")
-    private String photo_url;
-
     @Column(name="user_status")
     private String user_status;
 

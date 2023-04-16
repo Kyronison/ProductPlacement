@@ -50,10 +50,10 @@
                 <constraints nullable="true"/>
             </column>
 
-            <column name="photo_url"
-                    type="VARCHAR(100)">
-                <constraints nullable="true"/>
-            </column>
+            <column name="user_photo_url"
+                   type="VARCHAR(100)">
+               <constraints nullable="true"/>
+           </column>
 
             <column name="user_status"
                     type="VARCHAR(100)">

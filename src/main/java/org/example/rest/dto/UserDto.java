@@ -18,7 +18,6 @@ public class UserDto {
     private String password;
     private String user_location;
     private int salary;
-    private String photo_url;
     private String user_status;
     private String registration_date;
 
@@ -31,7 +30,6 @@ public class UserDto {
                 user.getPassword(),
                 user.getUser_location(),
                 user.getSalary(),
-                user.getPhoto_url(),
                 user.getUser_status(),
                 user.getRegistration_date()
         );
@@ -45,7 +43,6 @@ public class UserDto {
                 userDto.getPassword(),
                 userDto.getUser_location(),
                 userDto.getSalary(),
-                userDto.getPhoto_url(),
                 userDto.getUser_status(),
                 userDto.getRegistration_date()
         );

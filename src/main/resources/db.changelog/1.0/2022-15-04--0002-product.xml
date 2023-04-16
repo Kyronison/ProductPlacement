@@ -51,6 +51,16 @@
                 <constraints nullable="true"/>
             </column>
 
+            <column name="product_photo_url"
+                    type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="description"
+                    type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
 
         </createTable>
 
