@@ -26,9 +26,10 @@ public class ProductController {
             @RequestParam int user_id,
             @RequestParam String nameProduct,
             @RequestParam String locationProduct,
-            @RequestParam String costProduct
+            @RequestParam String costProduct,
+            @RequestParam String descriptionProduct
     ) {
-        Product product = productService.insert(user_id, nameProduct, locationProduct, costProduct);
+        Product product = productService.insert(user_id, nameProduct, locationProduct, costProduct, descriptionProduct);
         return ProductDto.toDto(product);
     }
 

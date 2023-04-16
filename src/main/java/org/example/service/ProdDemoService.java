@@ -61,7 +61,8 @@ public class ProdDemoService {
                 1,
                 "Кошка",
                 "Moscow",
-                "50000"
+                "50000",
+                "Крутое животное"
                 );
     }
 }

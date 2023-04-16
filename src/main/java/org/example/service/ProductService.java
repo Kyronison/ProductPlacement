@@ -9,7 +9,8 @@ public interface ProductService {
             int user_id,
             String nameProduct,
             String locationProduct,
-            String costProduct
+            String costProduct,
+            String descriptionProduct
     );
 
     Product update(

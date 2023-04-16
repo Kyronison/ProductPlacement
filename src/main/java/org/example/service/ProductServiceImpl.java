@@ -16,12 +16,13 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
-    public Product insert(int user_id, String nameProduct, String locationProduct, String costProduct) {
+    public Product insert(int user_id, String nameProduct, String locationProduct, String costProduct, String descriptionProduct) {
         Product product = Product.builder()
                 .user(userRepository.getById(user_id))
                 .name(nameProduct)
                 .product_location(locationProduct)
-                .cost(costProduct).
+                .cost(costProduct)
+                .description(descriptionProduct).
                 build();
         return productRepository.save(product);
     }
