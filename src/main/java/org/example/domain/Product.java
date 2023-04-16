@@ -38,6 +38,9 @@ public class Product {
     @Column(name="cost")
     private String cost;
 
+    @Column(name="product_photo_url")
+    private String product_photo_url;
+
     @Column(name="description")
     private String description;
 

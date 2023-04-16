@@ -19,6 +19,8 @@ public class ProductDto {
     private int likes;
     private int views;
     private String cost;
+    private String product_photo_url;
+    private String description;
     private UserDto userDto;
     public static ProductDto toDto(Product product){
         return new ProductDto(
@@ -29,6 +31,8 @@ public class ProductDto {
                 product.getLikes(),
                 product.getViews(),
                 product.getCost(),
+                product.getProduct_photo_url(),
+                product.getDescription(),
                 UserDto.toDto(product.getUser())
         );
     }
