@@ -16,31 +16,32 @@ public class ProdDemoService {
 
     private final UserRepository userRepository;
     private final ProductService productService;
-    private final UserService userService;
+
     private final ProductRepository productRepository;
 
     public void userDemo() {
         List<User> userList = userRepository.findAll();
 
-//        System.out.println("=============");
-//        for (User user : userList) {
-//            System.out.println(user);
-//        }
-//        System.out.println("=============");
+        System.out.println("=============");
+        for (User user : userList) {
+            System.out.println(user);
+        }
+        System.out.println("=============");
 
         User user = User.builder()
                 .name("Иван")
                 .build();
+
         userRepository.save(user);
-//        userList = userRepository.findAll();
-//
-//        System.out.println("=============");
-//        for (User user1 : userList) {
-//            System.out.println(user1);
-//        }
-//        System.out.println("=============");
-//
-//        System.out.println(userRepository.findByName("Иван"));
+        userList = userRepository.findAll();
+
+        System.out.println("=============");
+        for (User user1 : userList) {
+            System.out.println(user1);
+        }
+        System.out.println("=============");
+
+        System.out.println(userRepository.findByName("Иван"));
     }
 
     @Transactional
@@ -50,17 +51,17 @@ public class ProdDemoService {
         for (Product product :productList){
             System.out.println(product.getName()+":");
             System.out.println(product.getUser());
-        }
+        }*/
         List<Product> productList = productService.getAll();
         for (Product product : productList) {
             System.out.println(product.getName() + ":");
             System.out.println(product.getUser());
-        }*/
+        }
         productService.insert(
-                1,
                 "Кошка",
                 "Moscow",
                 "50000"
+
                 );
     }
 }

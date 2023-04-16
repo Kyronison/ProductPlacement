@@ -22,14 +22,15 @@ public class ProductApp {
 
         //Запуск SpringBoot-приложения и получение контекста
         ConfigurableApplicationContext context = SpringApplication.run(ProductApp.class, args);
-        context.getBean(ProdDemoService.class).userDemo();
+        /*
         context.getBean(ProdDemoService.class).prodDemo();
+        context.close();
         try {
             //Консоль для визуализации бд в браузере
             Console.main(args);
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 }
