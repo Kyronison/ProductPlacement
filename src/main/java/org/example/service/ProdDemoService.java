@@ -30,6 +30,7 @@ public class ProdDemoService {
 
         User user = User.builder()
                 .name("Иван")
+                .password("ok")
                 .build();
 
         userRepository.save(user);
